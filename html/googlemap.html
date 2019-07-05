@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no" />        
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0 }
+            #map-canvas { height: 100% }
+        </style>        
+        <script src="qrc:/js/myscript.js"></script>
 
+        <script type="text/javascript">
+
+            function initMap()
+            {
+                //46.889788, 1.400957
+                var
+                    mapCenter = [32.794488, -96.780372],
+                    mapOptions = {
+                        zoom: 18,
+                        center: new google.maps.LatLng(mapCenter[0], mapCenter[1]),
+                        mapTypeId: google.maps.MapTypeId.SATELLITE
+
+                    },
+                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                    myscriptNameSpace.test();
+            }         
+        </script>        
+    </head>
+
+    <body ondragstart="return false">
+        <div id="map-canvas" />
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSyQJ3wxBdwdN3WjYy2_A15lMINE6lBu0&callback=initMap"></script>
+    </body>
+</html>
