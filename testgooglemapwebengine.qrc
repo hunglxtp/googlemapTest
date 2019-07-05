@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>html/googlemap.html</file>
+        <file>js/myscript.js</file>
+    </qresource>
+</RCC>
